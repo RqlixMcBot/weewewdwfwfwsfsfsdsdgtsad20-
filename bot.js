@@ -171,7 +171,7 @@ client.on('message', msg => {
 
 var prefix = "^";
 client.on("message", message => {
-            if(message.content.startsWith("^تقديم")) {
+            if(message.content.startsWith("^التقد")) {
 		if(!message.channel.guild) return;
                 if(message.author.bot) return;
 	    let channel = message.guild.channels.find("name", "التقديمات")
@@ -317,6 +317,9 @@ client.on('message',async message => {
 
 
 
+
+
+
 var code = "^";
 client.on('message',async message => {
     if(message.content.startsWith(code + "js")) {
@@ -378,12 +381,13 @@ client.on('message',async message => {
             collected.first().delete();
             jscodes.send(`@everyone | @here
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-**BlackSpirit Codes :arrow_down:**            
+**Superme Codes© :arrow_down:**            
 \`\`\`js
 ${thisMessage}\`\`\`
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 **وصف الكود**: ${boi}
-**تم النشر بواسطة**: ${message.author}; 
+**تم النشر بواسطة**: ${message.author}
+**المصدر / الشخص الذي صنع الكود**: ${boi2}`); 
           }
         }
     );
@@ -445,23 +449,14 @@ client.on("message", message => {
 });
 
 client.on('message', message => {
-    if(message.content.includes('discord.gg/')) {
-        if(message.member.hasPermission('ADMINISTRATOR')) return;
-        message.delete();
-        message.guild.member(message.author).addRole(message.guild.roles.find(r => r.name === 'Muted'));
-        let embedP = new Discord.RichEmbed()
-        .setTitle('❌ | تمت معاقبتك')
-        .setAuthor(message.author.username, message.author.avatarURL)
-        .addField(`** لقد قمت بمخالفة قوانين السيرفر من خلال نشر روابط اضافة الى سيرفرات اخرى  **` , `**ملاحظة  : إن كآن هذآ الاسكات عن طريق الخطأ الرجاء التوجه والتكلم مع الادآرة**`)
-        .addField(`by`,`Hello,Im'BlackSpirit Codes`)
-        .setColor('RED')
-        .setThumbnail(message.author.avatarURL)
-        .setFooter(`${message.guild.name} Server`, message.guild.iconURL)
-        
-        message.channel.send(embedP);
-    }
+  if(message.content.includes('discord.gg')){
+                                          if(!message.channel.guild) return message.reply('** advertising me on DM ? :thinking:   **');
+      if (!message.member.hasPermissions(['ADMINISTRATOR'])){
+      message.delete()
+  return message.reply(`** Not allowed to advertising Here :angry: ! **`)
+  }
+}
 });
-
 
 client.on('message', message => { 
            if (message.content.startsWith(prefix + "id")) {
@@ -532,9 +527,6 @@ msg.delete();
 })
 }
 });
-
-
-
 
 
 client.on('message',async message => {
