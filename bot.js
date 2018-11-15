@@ -13,7 +13,6 @@ const moment = require("moment");
 const { Client, Util } = require('discord.js');  
 const UserBlocked = new Set(); 
 const jimp = require('jimp');   
-const figlet = require('figlet');
 const google = require('google-it'); 
 const queue = new Map(); 
 const zalgo = require('zalgolize');   
