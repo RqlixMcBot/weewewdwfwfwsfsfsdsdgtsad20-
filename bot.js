@@ -171,7 +171,7 @@ client.on('message', msg => {
 
 var prefix = "^";
 client.on("message", message => {
-            if(message.content.startsWith("^التقديم")) {
+            if(message.content.startsWith("^تقديم")) {
 		if(!message.channel.guild) return;
                 if(message.author.bot) return;
 	    let channel = message.guild.channels.find("name", "التقديمات")
@@ -381,7 +381,7 @@ client.on('message',async message => {
             collected.first().delete();
             jscodes.send(`@everyone | @here
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-**Superme Codes© :arrow_down:**            
+**BlackSpirit Codes :arrow_down:**            
 \`\`\`js
 ${thisMessage}\`\`\`
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
