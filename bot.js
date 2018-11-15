@@ -6,7 +6,7 @@ const db = require('quick.db');
 const premium = ['334585041801969687']
 const client = new Discord.Client();   
 const bot = new Discord.Client();   
-const googl = require('goo.gl');  
+ 
 const translate = require('google-translate-api');   
 const fs = require("fs"); 
 const canvas = require("canvas");
