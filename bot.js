@@ -444,8 +444,7 @@ client.on('message',async message => {
 ${thisMessage}\`\`\`
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 **وصف الكود**: ${boi}
-**تم النشر بواسطة**: ${message.author}
-**المصدر / الشخص الذي صنع الكود**: ${boi2}`); 
+**تم النشر بواسطة**: ${message.author}; 
           }
         }
     );
@@ -587,19 +586,6 @@ msg.delete();
 });
 
 
-client.on('message', message => {
-if(message.content === adminprefix + "restart") {
-      if (!devs.includes(message.author.id)) return;
-          message.channel.send(`⚠️ **الشخص الذي اعاد تشغيل البوت ${message.author.username}**`);
-        console.log(`⚠️ جاري اعادة تشغيل البوت... ⚠️`);
-        client.destroy();
-        child_process.fork(__dirname + "/bot.js");
-        console.log(`تم اعادة تشغيل البوت`);
-    }
-  
-  }); 
-
-const developers = ["334585041801969687","345322879627558923","396044497026547725"]
 
 
 
